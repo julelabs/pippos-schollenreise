@@ -2,10 +2,10 @@ export type Mode='mini'|'big';
 export type Task={kind:'count'|'plus'|'divide'|'times';a:number;b:number;answer:number};
 export type Journey={tasks:Task[];step:number;round:number};
 export const AVATARS=[
- {id:'pippo',name:'Pippo',price:0,effect:'Der mutige Pinguin für den Start.'},
- {id:'dino',name:'Dino',price:30,effect:'Landet mit einem kräftigen Wackler.'},
- {id:'skeleton',name:'Skelett',price:50,effect:'Klappert fröhlich beim Landen.'},
- {id:'cactus',name:'Kaktus',price:100,effect:'Lässt kleine Blüten aufploppen.'},
+ {id:'pippo',name:'Pippo',price:0,effect:'Der mutige Pinguin für den Start.',world:'ice-world.png',worldName:'Eiswelt',destination:'Iglu',destinationPhrase:'zum Iglu',arrival:'AM IGLU!'},
+ {id:'dino',name:'Dino',price:30,effect:'Landet mit einem kräftigen Wackler.',world:'jungle-world.png',worldName:'Urzeit-Dschungel',destination:'Dinonest',destinationPhrase:'zum Dinonest',arrival:'AM DINONEST!'},
+ {id:'skeleton',name:'Skelett',price:50,effect:'Klappert fröhlich beim Landen.',world:'graveyard-world.png',worldName:'Mondfriedhof',destination:'Gruft',destinationPhrase:'zur Gruft',arrival:'AN DER GRUFT!'},
+ {id:'cactus',name:'Kaktus',price:100,effect:'Lässt kleine Blüten aufploppen.',world:'desert-world.png',worldName:'Wüstenoase',destination:'Oase',destinationPhrase:'zur Oase',arrival:'AN DER OASE!'},
 ] as const;
 export type AvatarId=typeof AVATARS[number]['id'];
 export type PlayerProfile={coins:number;owned:AvatarId[];active:AvatarId};
